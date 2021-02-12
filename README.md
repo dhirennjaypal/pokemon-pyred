@@ -1,17 +1,11 @@
 # Media
 
-![error](screenshots/ss1.mp4)
-![error](screenshots/ss2.mp4)
-![error](screenshots/ss3.mp4)
-![error](screenshots/ss4.mp4)
-![error](screenshots/ss5.jpeg)
-![error](screenshots/ss6.jpeg)
-![error](screenshots/ss7.jpeg)
-![error](screenshots/ss8.jpeg)
-![error](screenshots/ss9.jpeg)
-![error](screenshots/ss10.jpeg)
-![error](screenshots/ss11.jpeg)
-![error](screenshots/ss12.jpeg)
+![error](screenshots/ss1.gif) ![error](screenshots/ss2.gif)
+![error](screenshots/ss3.gif) ![error](screenshots/ss4.gif)
+![error](screenshots/ss5.jpeg) ![error](screenshots/ss6.jpeg)
+![error](screenshots/ss7.jpeg) ![error](screenshots/ss8.jpeg)
+![error](screenshots/ss9.jpeg) ![error](screenshots/ss10.jpeg)
+![error](screenshots/ss11.jpeg) ![error](screenshots/ss12.jpeg)
 ![error](screenshots/ss13.jpeg)
 
 # About

@@ -1,7 +1,5 @@
 # Media
 
-![error](screenshots/ss1.gif) ![error](screenshots/ss2.gif)
-![error](screenshots/ss3.gif) ![error](screenshots/ss4.gif)
 ![error](screenshots/ss5.jpeg) ![error](screenshots/ss6.jpeg)
 ![error](screenshots/ss7.jpeg) ![error](screenshots/ss8.jpeg)
 ![error](screenshots/ss9.jpeg) ![error](screenshots/ss10.jpeg)

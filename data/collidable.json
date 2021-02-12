@@ -1,0 +1,16 @@
+{ 
+	"Collidable" : [
+		"Wall",
+		"Bed",
+		"Chair",
+		"Trashbin",
+		"Tree",
+		"Computer",
+		"SComputer",
+		"Table",
+		"TV",
+		"Fridge",
+		"Locked",
+		"Fence"
+	] 
+}

@@ -1,0 +1,11 @@
+{
+	"name" : "NPC", "image" : "npc_char0", "dir":"Up", "delay" : 80,
+	"scripts" : [
+		{"type" : "changedir", "dir" : "player" },
+		{ "type" : "dialog", "text" : "Technology is incredible!", "cursor" : 1 },
+		{ "type" : "dialog", "text" : "You can now store and recall items and POKéMON as$$data via PC.", "cursor" : 0 }
+	],
+	"movements" : [
+		"Down", "Left", "Down", "Right", "Up", "Up", "Right", "Left"
+	]
+}

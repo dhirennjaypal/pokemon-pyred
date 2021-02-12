@@ -1,0 +1,13 @@
+{
+	"Bed" : "No time to sleep, lets get going.",
+	"Chair" : "No time to sit, \nlets get going.",
+	"Tree" : "This tree is taking space.",
+	"Trashbin" : "There's some trash in trashbin",
+	"Computer" : "This computer is not working.",
+	"SComputer" : "You don't have permission to access this computer.",
+	"TV" : "Shingeki no Kyojin is airing.",
+	"Fridge" : "There's some food in fridge.",
+	"Table" : "The table is clean.",
+	"Locked" : "This door is locked.",
+	"Fence" : "You should not climb fence"
+}

@@ -1,0 +1,17 @@
+{
+	"name" : "Mom", "image" : "npc_mom", "dir":"Up",
+	"flags" : [ "watched" , "notwatched" ],
+	"scripts" : [
+		{"type" : "changedir", "dir" : "player" },
+		{ "type" : "dialog", "text" : "Testing Script Engine", "cursor" : 1 },
+		{ "type" : "dialog", "text" : "#Made By : @Dhiren Jaypal@", "cursor" : 1 },
+		{ "type" : "dialog", "text" : "Hey Dhiren...", "cursor" : 0 },
+		{ "type" : "choicedialog", "text" : "Have you watched Shingeki no Kyojin ?", "choices" : { "Yes" : "watched", "No" : "notwatched"}, "cursor" : 1 },
+		{ "type" : "dialog", "conditions" : ["watched"],
+		"text" : "Its awesome!!", "cursor" : 1 },
+		{ "type" : "dialog", "conditions" : ["notwatched"],
+		"text" : "Watch it, its airing right now!!", "cursor" : 1 },
+		{ "type" : "changedir", "dir" : "Up" },
+		{ "type" : "dialog", "text" : "Last Script.", "cursor" : 0 }
+	]
+}

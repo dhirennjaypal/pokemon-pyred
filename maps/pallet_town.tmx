@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<map version="1.2" orientation="orthogonal" renderorder="right-down" width="24" height="20" tilewidth="16" tileheight="16" nextobjectid="157">
+  <tileset source="tilesets/Buildings1.tsx" firstgid="1" />
+  <tileset source="tilesets/Buildings7.tsx" firstgid="381" />
+  <tileset source="tilesets/Water02.tsx" firstgid="733" />
+  <tileset source="tilesets/various1.tsx" firstgid="925" />
+  <tileset source="tilesets/Path0.tsx" firstgid="1485" />
+  <tileset source="tilesets/GrassFlowers.tsx" firstgid="1781" />
+  <layer name="Walkable" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAADvHysBwbhSP4lE8igcJbmBkYKhnRNDUNh/Z7AYC5i9lGPjwGMXDFwMArcKYj4AHAAA=
+  </data>
+  </layer>
+  <layer name="Walkable" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYOiBNCqpGQWjAB9YOtAOGAVEgTZG6pjTTiVziAUAcCcyb4AHAAA=
+  </data>
+  </layer>
+  <layer name="Water" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCugHkpgZGJKhOIWZ+uZnAc3MhuKcQWw+AAl2LQ6ABwAA
+  </data>
+  </layer>
+  <layer name="Collisions" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAM3Sy07CQBiG4bIgXATXIsLKAysFV4CKCQEuQY4LEBDPmrSIAgEM3KavSZuMTZmZlibwJU/atH+nX9oxI4ZhwdQ8OtGdn2Lm4+hEd97dK6y4+4s5QAKHSCLl8bxqRtb/CMc4wSnSHuurZmT9z3CODLK48FhfNSPrn0MeBVziymN91cym/o+cl+zzMiqoup7Vmdnl/pHlFjXU0UATLbRdc0H7d9DFHXroY4B7H/2vo4ZRtN1gKNx/wjNe8Io3vOMjpP4WRvjEGF/4xsRHf1nmWGCJH/vaCmsf/R9C2E9B++tmm/0v/v+/fy/uBSf73F8VcU3nPfHYf9tE/Ca/uct45IAHAAA=
+  </data>
+  </layer>
+  <layer name="Collisions" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGtjZGBoB2JqgzaouX1A3E8D82Hmto26HysYdT9+MOp+/GDU/fjBqPtxA2QzaeF+ZDOHuvsBGXpDgoAHAAA=
+  </data>
+  </layer>
+  <layer name="blank" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkYBvQEAKzS3KoAHAAA=
+  </data>
+  </layer>
+  <layer name="WalkBehind" width="24" height="20">
+    <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAANWRWw5AMBBF2z1hW94bQPjy+JFYrishJtXSIaFuclKReZwiBC+TFGKUzCZkuNFjSquZNSnvPOCD4GSOqUZ3v7f9n+RL/8piz1WNy98/BBGIQQJSkIGc1LjmXzB3u+bPzZV/+XDX1/6c6P79n/zVUHc6c/FvQL2enNSkd1Rmbunw3Mv9tL1PK4+91H8GZ6j9B4AHAAA=
+  </data>
+  </layer>
+  <objectgroup name="objects">
+    <object name="Fence" type="" id="3" x="96" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="4" x="80" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="5" x="112" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="6" x="128" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="7" x="144" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="8" x="96" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="9" x="112" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="10" x="128" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="11" x="144" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="12" x="144" y="288" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="13" x="144" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="14" x="96" y="288" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="15" x="96" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="16" x="64" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="17" x="80" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="18" x="48" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="19" x="32" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="20" x="16" y="288" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="21" x="16" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="22" x="80" y="224" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="23" x="16" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="24" x="16" y="240" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="25" x="16" y="224" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="26" x="16" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="27" x="16" y="192" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="28" x="16" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="29" x="16" y="160" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="30" x="16" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="31" x="16" y="128" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="32" x="64" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="33" x="16" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="34" x="16" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="35" x="16" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="36" x="16" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="37" x="16" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="38" x="16" y="32" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="39" x="32" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="40" x="48" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="41" x="64" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="42" x="80" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="43" x="80" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="44" x="96" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="45" x="80" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="46" x="96" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="47" x="112" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="48" x="112" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="49" x="128" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="50" x="144" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="51" x="144" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="52" x="128" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="53" x="144" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="54" x="160" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="55" x="176" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="58" x="224" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="59" x="208" y="0" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="60" x="192" y="0" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="61" x="240" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="62" x="224" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="63" x="240" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="64" x="224" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="65" x="256" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="66" x="256" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="67" x="272" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="68" x="272" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="69" x="288" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="70" x="304" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="71" x="352" y="32" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="72" x="336" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="73" x="320" y="16" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="74" x="352" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="75" x="352" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="76" x="352" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="77" x="352" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="78" x="352" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="79" x="352" y="128" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="80" x="352" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="81" x="352" y="160" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="82" x="352" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="83" x="352" y="192" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="84" x="352" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="85" x="352" y="224" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="86" x="352" y="240" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="87" x="352" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="88" x="352" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="89" x="336" y="288" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="90" x="288" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="91" x="304" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="92" x="320" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="93" x="272" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="94" x="160" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="95" x="176" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="96" x="192" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="97" x="208" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="98" x="224" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="99" x="240" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="100" x="256" y="304" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="101" x="256" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="102" x="240" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="103" x="256" y="192" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="104" x="272" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="105" x="224" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="106" x="288" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="107" x="288" y="192" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="108" x="208" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="109" x="192" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="110" x="192" y="192" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="111" x="192" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="112" x="192" y="160" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="113" x="192" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="114" x="208" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="115" x="224" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="116" x="224" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="117" x="240" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="118" x="256" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="119" x="240" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="120" x="256" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="122" x="288" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="123" x="288" y="160" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="124" x="272" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="125" x="288" y="176" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="126" x="272" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="127" x="288" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="128" x="288" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="129" x="224" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="130" x="224" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="131" x="288" y="64" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="132" x="288" y="48" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="133" x="288" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="134" x="144" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="135" x="128" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="136" x="112" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="137" x="96" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="138" x="80" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="139" x="80" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="140" x="80" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="141" x="144" y="96" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="142" x="144" y="80" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="143" x="208" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="144" x="224" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="145" x="240" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="146" x="272" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="147" x="304" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Fence" type="" id="148" x="288" y="256" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Warp5" type="" id="149" x="256" y="208" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Locked" type="" id="150" x="240" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Warp4" type="" id="152" x="96" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="npc_char0" type="" id="154" x="144" y="208" width="16" height="16">
+      <ellipse />
+      <properties>
+        <property name="dir" value="Down" />
+      </properties>
+    </object>
+    <object name="Wall" type="" id="155" x="208" y="112" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Wall" type="" id="156" x="336" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+  </objectgroup>
+</map>

@@ -2,3 +2,5 @@
 backups/
 _new dev style/
 __pycache__
+todolocal.txt
+data/savegame.json

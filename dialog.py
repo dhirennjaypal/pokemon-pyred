@@ -4,7 +4,7 @@ import box
 import foreground
 
 LINESEP = "$$"
-OBJECTBUFFER = 15
+OBJECTBUFFER = 0
 LINEBUFFER = 10
 BORDER = 20
 TRANS = (255, 0, 255)

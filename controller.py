@@ -1,5 +1,7 @@
 import pygame
 
+TOUCHSCREEN = True
+
 class Controller:
 
 	def __init__(self, screenw, screenh, buttonw, buttonh):
@@ -36,10 +38,11 @@ class Controller:
 		
 	def draw(self, surface, color, font):
 		#pressed = "None"
-		#touched = []
-		#if pygame.mouse.get_pressed()[0]:
-			#pressed = self.get_pressed()
-		touched = self.get_touched(surface)
+		touched = []
+		if not TOUCHSCREEN and pygame.mouse.get_pressed()[0]:
+			touched.append(self.get_pressed())
+		if TOUCHSCREEN:
+			touched = self.get_touched(surface)
 		for set in self.rect:
 			for button in self.rect[set]:
 				surf = pygame.Surface(( self.rect[set][button][2], self.rect[set][button][3] ))
@@ -67,6 +70,14 @@ class Controller:
 		for event in pygame.event.get():
 			if event.type == pygame.FINGERDOWN:
 				self.touchdown = True
+				self.touches.append(event)
+				
+			elif event.type == pygame.FINGERMOTION:
+				for i in range(0, len(self.touches)):
+					if self.touches[i].finger_id == event.finger_id:
+						self.touches.pop(i)
+						break
+				#self.touchdown = True
 				self.touches.append(event)
 
 			elif event.type == pygame.FINGERUP:

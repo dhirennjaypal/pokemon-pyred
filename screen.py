@@ -12,17 +12,14 @@ class Screen:
 		self.screen_size = (640, 360)
 		self.font = pygame.font.SysFont("Arial", 20)
 		self.surface = pygame.display.set_mode(self.screen_size,pygame.SCALED | pygame.FULLSCREEN)
-		self.gamepad = Controller(self.screen_size[0], self.screen_size[1], 50, 50)
-		self.text = "None"
-		self.state = "map"
-		self.dialogbox = 0
+		self.gamepad = Controller(self.screen_size[0], self.screen_size[1], 60, 60)
+		self.dialogbox = None
 		self.game = game
 		self.mainmenu = MainMenu(self.surface)
 		self.menu = Menu(self, self.game)
 		self.fade = None
 		self.fadein = False
 		self.state = { "mainmenu" : True, "map" : False, "dialog" : False, "menu" : False, "fade" : False}
-		#self.counter = 0
 
 	def drawDialog(self, dialogbox):
 		self.dialogbox = dialogbox
@@ -30,15 +27,12 @@ class Screen:
 	
 	def drawFade(self, fadein = False):
 		self.counter = 0
-		#self.ready = False
 		self.fadein = fadein
 		if fadein:
 			self.fade = FadeIn(self.surface, 30)
 		else:
 			self.fade = FadeOut(self.surface, 30)
-		#self.fade.draw()
 		self.state["fade"] = True
-		#self.state["map"] = False
 
 	def draw(self):
 		pygame.display.flip()
@@ -47,7 +41,7 @@ class Screen:
 			self.mainmenu.draw()
 
 		if self.state["map"]:
-			self.game.map.draw(self.surface)
+			self.game.map.draw()
 
 		if self.state["dialog"]:
 			self.dialogbox.draw()
@@ -67,10 +61,7 @@ class Screen:
 			if not self.fade.busy and self.fadein:
 				self.fadein = False
 				self.state["fade"] = False
-			#if self.fadein:
-			#	self.state["map"] = True
 
-			#print(self.fadein)
 		self.gamepad.draw(self.surface, white, self.font)
 		pygame.display.flip()
 		#test

@@ -4,7 +4,6 @@ import pyscroll
 from pyscroll.group import PyscrollGroup
 from dialog import Dialog
 from foreground import FadeOutAndIn, FadeOut, FadeIn
-#from npc import NPC
 
 class Map:
 
@@ -20,7 +19,7 @@ class Map:
 		#loading map to creating group
 		tmx_data = load_pygame(self.datahelper.maps[data["mapname"]]["file"])
 		map_data = pyscroll.data.TiledMapData(tmx_data)
-		self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.surface.get_size(), clamp_camera=True) #tall_sprites=1)
+		self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.surface.get_size(), clamp_camera=False) #tall_sprites=1)
 		self.map_layer.zoom = 2
 		self.group = PyscrollGroup(map_layer=self.map_layer, default_layer=5)#data["layer"])
 		#setting up player
@@ -74,13 +73,13 @@ class Map:
 		#self.fade = FadeOut(self.screen.surface, 30)
 		#self.loaded = False
 
-	def draw(self, screen):
+	def draw(self):
 		self.group.update()
 		self.hero.tick()
 		self.group.center(self.hero.rect.topleft)
 		#self.group.draw(screen)
 		#if self.loaded:
-		self.group.draw(screen)
+		self.group.draw(self.screen.surface)
 
 	def change_map(self, data):
 		#self.screen.drawFade()

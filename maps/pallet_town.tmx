@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<map version="1.2" orientation="orthogonal" renderorder="right-down" width="24" height="20" tilewidth="16" tileheight="16" nextobjectid="157">
+<map version="1.2" orientation="orthogonal" renderorder="right-down" width="24" height="20" tilewidth="16" tileheight="16" nextobjectid="158">
   <tileset source="tilesets/Buildings1.tsx" firstgid="1" />
   <tileset source="tilesets/Buildings7.tsx" firstgid="381" />
   <tileset source="tilesets/Water02.tsx" firstgid="733" />
@@ -474,9 +474,6 @@
     <object name="Warp5" type="" id="149" x="256" y="208" width="16" height="16">
       <ellipse />
     </object>
-    <object name="Locked" type="" id="150" x="240" y="112" width="16" height="16">
-      <ellipse />
-    </object>
     <object name="Warp4" type="" id="152" x="96" y="112" width="16" height="16">
       <ellipse />
     </object>
@@ -490,6 +487,9 @@
       <ellipse />
     </object>
     <object name="Wall" type="" id="156" x="336" y="272" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="Warp7" type="" id="157" x="240" y="112" width="16" height="16">
       <ellipse />
     </object>
   </objectgroup>

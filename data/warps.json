@@ -31,5 +31,13 @@
 	"Warp6" : {
 		"mapname" : "Pallet Town",
 		"player" : { "x" : 256, "y" : 208, "dir" : "Down", "walking" : 1,			"walkingx" : 0, "walkingy" : 1 }
+	},
+	"Warp7" : {
+		"mapname" : "Rival's House",
+		"player" : { "x" : 64, "y" : 144, "dir" : "Up", "walking" : 1,			"walkingx" : 0, "walkingy" : -1 }
+	},
+	"Warp8" : {
+		"mapname" : "Pallet Town",
+		"player" : { "x" : 240, "y" : 112, "dir" : "Down", "walking" : 1,			"walkingx" : 0, "walkingy" : 1 }
 	}
 }

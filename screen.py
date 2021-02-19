@@ -12,7 +12,7 @@ class Screen:
 		self.screen_size = (640, 360)
 		self.font = pygame.font.SysFont("Arial", 20)
 		self.surface = pygame.display.set_mode(self.screen_size,pygame.SCALED | pygame.FULLSCREEN)
-		self.gamepad = Controller(self.screen_size[0], self.screen_size[1], 50, 50)
+		self.gamepad = Controller(self.screen_size[0], self.screen_size[1], 80, 80)
 		self.text = "None"
 		self.state = "map"
 		self.dialogbox = 0

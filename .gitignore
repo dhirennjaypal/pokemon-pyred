@@ -1,6 +1,6 @@
 .nomedia
 backups/
 _new dev style/
-__pycache__
+__pycache__/
 todolocal.txt
-data/savegame.json
+savegame.json

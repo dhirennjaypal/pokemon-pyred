@@ -1,6 +1,8 @@
 import pygame
 from dialog import Dialog
 
+TOUCHSCREEN = True
+
 class Input_Handler:
 
 	def __init__(self, game):
@@ -12,9 +14,11 @@ class Input_Handler:
 		self.keydown = False
 		self.hero_walking = False
 		self.holdtime = 0
-		self.delay = 20
+		self.delay = 5
 
 	def main(self):
+		#touchscreen
+		touched = self.gamepad.get_touched(self.screen.surface)
 		#new_way
 		if pygame.mouse.get_pressed()[0]:
 			pressed = self.gamepad.get_pressed()
@@ -67,7 +71,45 @@ class Input_Handler:
 			#end mainmenu
 
 			#for map state
-			elif self.screen.state["map"]:
+			
+			#touchscreen
+			elif self.screen.state["map"] and TOUCHSCREEN and touched:
+				if touched and not self.hero.walking:
+					self.holdtime += 1
+				if "B" in touched:
+					if not self.hero.walking:
+						self.hero.running = True
+				else:
+					self.hero.running = False
+				if self.hero.dir in touched and not self.hero_walking:# and not self.keydown:
+					self.hero_walking = True
+				for key in touched:
+					if key in ("Up", "Down", "Left", "Right"):
+						self.hero.change_dir(key)
+						self.keydown = True
+				if (self.holdtime % self.delay == 0 and not self.hero.walking) or self.hero_walking:
+					if "Up" in touched:
+						self.hero.move(0, -1)
+						self.hero_walking = True
+					elif "Down" in touched:
+						self.hero.move(0, 1)
+						self.hero_walking = True
+					elif "Left" in touched:
+						self.hero.move(-1, 0)
+						self.hero_walking = True
+					elif "Right" in touched:
+						self.hero.move(1, 0)
+						self.hero_walking = True
+
+				if "X" in touched:
+					self.screen.state["menu"] = True			
+			#
+			#touchscreen end
+			#
+			#
+				
+				
+			elif self.screen.state["map"] and not TOUCHSCREEN:
 				if pressed != "None" and not self.hero.walking:
 					self.holdtime += 1
 				if (self.hero.dir == pressed and not self.hero_walking) and not self.keydown:
@@ -110,7 +152,12 @@ class Input_Handler:
 					#self.textbox.draw()
 			#end map state
 
-		else:
+		if TOUCHSCREEN and not touched:
+				self.holdtime = 0
+				self.keydown = False
+				self.hero_walking = False
+
+		elif not TOUCHSCREEN:
 			self.holdtime = 0
 			self.keydown = False
 			self.hero_walking = False

@@ -111,9 +111,8 @@ class Map:
 			if self.npcs[i].walking:
 				if rect.colliderect(self.npcs[i].facing):
 					return True
-			else:
-				if rect.collidepoint(self.npcs[i].position[0], self.npcs[i].position[1]+8):
-					return True
+			if rect.collidepoint(self.npcs[i].position[0], self.npcs[i].position[1]+8):
+				return True
 		if npc and rect.collidepoint(self.hero.position[0], self.hero.position[1]+8):
 			return True
 		return False

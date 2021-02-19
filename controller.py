@@ -29,16 +29,22 @@ class Controller:
 			for button in self.rect[set]:
 				self.pyrect[set][button] = pygame.Rect(self.rect[set][button])
 		
+		#touchscreen logic
+		self.touchdown = False
+		self.touches = []
+		
 		
 	def draw(self, surface, color, font):
-		pressed = "None"
-		if pygame.mouse.get_pressed()[0]:
-			pressed = self.get_pressed()
+		#pressed = "None"
+		#touched = []
+		#if pygame.mouse.get_pressed()[0]:
+			#pressed = self.get_pressed()
+		touched = self.get_touched(surface)
 		for set in self.rect:
 			for button in self.rect[set]:
 				surf = pygame.Surface(( self.rect[set][button][2], self.rect[set][button][3] ))
 				pygame.draw.rect(surf, color, pygame.Rect(0, 0, self.rect[set][button][2], self.rect[set][button][3] ), border_radius=5)
-				if pressed == button:
+				if touched and button in touched:
 					surf.set_alpha(150)
 				else:
 					surf.set_alpha(50)
@@ -56,3 +62,34 @@ class Controller:
 					if self.pyrect[set][button].collidepoint(pos):
 						return button
 		return None
+	
+	def get_touched(self, surface):
+		for event in pygame.event.get():
+			if event.type == pygame.FINGERDOWN:
+				self.touchdown = True
+				self.touches.append(event)
+
+			elif event.type == pygame.FINGERUP:
+				for i in range(0, len(self.touches)):
+					if self.touches[i].finger_id == event.finger_id:
+						self.touches.pop(i)
+						break
+
+				if not len(self.touches):
+					self.touchdown = False
+
+		if self.touchdown:
+			touched = []
+
+			for touch in self.touches:
+				x = touch.x * surface.get_width()
+				y = touch.y * surface.get_height()
+			
+				for set in self.pyrect:
+					for button in self.pyrect[set]:
+						if self.pyrect[set][button].collidepoint((x, y)):
+							touched.append(button)
+			return touched
+
+		else:
+			return None

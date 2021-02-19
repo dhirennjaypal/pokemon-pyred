@@ -161,7 +161,7 @@ class ScriptEngine:
 		#temp start
 		if value == "savegame":
 			savegame.save(self.game)
-			dialogbox = Dialog( "Game save", self.game.screen.surface)
+			dialogbox = Dialog( "Game saved.", self.game.screen.surface)
 			self.game.screen.drawDialog(dialogbox)
 		#temp end
 		#pass

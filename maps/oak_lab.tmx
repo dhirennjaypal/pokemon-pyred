@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<map version="1.2" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" nextobjectid="76">
+<map version="1.2" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" nextobjectid="79">
   <tileset source="tilesets/normal1.tsx" firstgid="1" />
   <tileset source="tilesets/InteriorFloor 1_3.tsx" firstgid="1025" />
   <tileset source="tilesets/SinnohInteriorSet0.tsx" firstgid="1355" />
@@ -236,6 +236,9 @@
       <ellipse />
     </object>
     <object name="Wall" type="" id="75" x="16" y="144" width="16" height="16">
+      <ellipse />
+    </object>
+    <object name="npc_oak" type="" id="78" x="112" y="64" width="16" height="16">
       <ellipse />
     </object>
   </objectgroup>

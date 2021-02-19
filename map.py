@@ -20,7 +20,7 @@ class Map:
 		#loading map to creating group
 		tmx_data = load_pygame(self.datahelper.maps[data["mapname"]]["file"])
 		map_data = pyscroll.data.TiledMapData(tmx_data)
-		self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.surface.get_size(), clamp_camera=False) #tall_sprites=1)
+		self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.surface.get_size(), clamp_camera=True) #tall_sprites=1)
 		self.map_layer.zoom = 2
 		self.group = PyscrollGroup(map_layer=self.map_layer, default_layer=5)#data["layer"])
 		#setting up player

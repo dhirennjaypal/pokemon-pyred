@@ -13,6 +13,7 @@ class Input_Handler:
 		self.gamepad = game.gamepad
 		self.keydown = False
 		self.hero_walking = False
+		self.hero_autorun = False
 		self.holdtime = 0
 		self.delay = 5
 
@@ -20,7 +21,7 @@ class Input_Handler:
 		#touchscreen
 		touched = self.gamepad.get_touched(self.screen.surface)
 		#new_way
-		if pygame.mouse.get_pressed()[0]:
+		if pygame.mouse.get_pressed()[0] or touched:
 			pressed = self.gamepad.get_pressed()
 
 			#for menu
@@ -76,11 +77,11 @@ class Input_Handler:
 			elif self.screen.state["map"] and TOUCHSCREEN and touched:
 				if touched and not self.hero.walking:
 					self.holdtime += 1
-				if "B" in touched:
-					if not self.hero.walking:
-						self.hero.running = True
-				else:
-					self.hero.running = False
+				if not self.hero.walking:
+					if "B" in touched:
+						self.hero.running = not self.hero_autorun
+					else:
+						self.hero.running = self.hero_autorun
 				if self.hero.dir in touched and not self.hero_walking:# and not self.keydown:
 					self.hero_walking = True
 				for key in touched:
@@ -100,15 +101,27 @@ class Input_Handler:
 					elif "Right" in touched:
 						self.hero.move(1, 0)
 						self.hero_walking = True
-
+				if "L" in touched:
+					if not self.hero_autorun:
+						dialogbox = Dialog( "Autorun Enabled", self.screen.surface)
+						self.screen.drawDialog(dialogbox)
+						#self.screen.state["dialog"] = True
+						self.hero_autorun = True
+					else:
+						dialogbox = Dialog( "Autorun Disabled", self.screen.surface)
+						self.screen.drawDialog(dialogbox)
+						#self.screen.state["dialog"] = True
+						self.hero_autorun = False
+					self.hero.running = self.hero_autorun
 				if "X" in touched:
-					self.screen.state["menu"] = True			
+					self.screen.state["menu"] = True
+				if "A" in touched and not self.keydown:
+						self.map.interact()
+						self.keydown = True			
 			#
 			#touchscreen end
 			#
-			#
-				
-				
+			
 			elif self.screen.state["map"] and not TOUCHSCREEN:
 				if pressed != "None" and not self.hero.walking:
 					self.holdtime += 1
@@ -137,18 +150,17 @@ class Input_Handler:
 				elif pressed == "X":
 					self.screen.state["menu"] = True
 				elif pressed == "L":
-					if self.delay == 20:
+					if not self.hero_autorun:
 						dialogbox = Dialog( "Autorun Enabled", self.screen.surface)
 						self.screen.drawDialog(dialogbox)
 						#self.screen.state["dialog"] = True
-						self.delay = 5
-						self.hero.running = True
+						self.hero_autorun = True
 					else:
 						dialogbox = Dialog( "Autorun Disabled", self.screen.surface)
 						self.screen.drawDialog(dialogbox)
 						#self.screen.state["dialog"] = True
-						self.delay = 20
-						self.hero.running = False
+						self.hero_autorun = False
+					self.hero.running = self.hero_autorun
 					#self.textbox.draw()
 			#end map state
 

@@ -1,0 +1,8 @@
+{
+	"name" : "Prof. Oak", "image" : "npc_oak", "dir":"Down",
+	"scripts" : [
+		{"type" : "changedir", "dir" : "player" },
+		{ "type" : "dialog", "text" : "Hello Dhruv$$How are you ?", "cursor" : 1 },
+		{ "type" : "dialog", "text" : "You want Pokémon ?$$Sorry, I don't have any right now.", "cursor" : 0 }
+	]
+}

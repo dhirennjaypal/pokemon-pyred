@@ -1,5 +1,5 @@
 import pygame
-from dialog import Dialog
+from src.components.dialog import Dialog
 
 TOUCHSCREEN = True
 

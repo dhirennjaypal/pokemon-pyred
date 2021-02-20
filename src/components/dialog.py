@@ -1,7 +1,7 @@
 import pygame
-import controller
-import box
-import foreground
+#import controller
+from . import box
+from . import foreground
 
 LINESEP = "$$"
 OBJECTBUFFER = 0

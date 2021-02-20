@@ -1,11 +1,11 @@
 import pygame
-from map import Map
-from player import Player
-from screen import Screen
-from input import Input_Handler
-from data import Data_Helper
-from scriptengine import ScriptEngine
-import savegame
+from .map import Map
+from .player import Player
+from .screen import Screen
+from src.backend.input import Input_Handler
+from src.backend.data import Data_Helper
+from src.backend.scriptengine import ScriptEngine
+from src.backend import savegame
 
 white = (255, 255, 255)
 
@@ -15,6 +15,7 @@ class Game:
 		#load everything to game
 		pygame.init()
 		self.screen = Screen(self)
+		self.dir = None
 
 		#reverse __init__
 		self.gamepad = self.screen.gamepad

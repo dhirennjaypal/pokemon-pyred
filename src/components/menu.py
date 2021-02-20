@@ -1,7 +1,7 @@
 import pygame
 #import savegame
-from dialog import ChoiceDialog
-from box import Box
+from .dialog import ChoiceDialog
+from .box import Box
 
 class Menu:
 

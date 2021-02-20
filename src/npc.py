@@ -14,7 +14,7 @@ class NPC(pygame.sprite.Sprite):
 		self.images["Up"] = {}
 
 		#loading surfaces
-		tileset = pygame.image.load("sprites/"+image+".png").convert_alpha()
+		tileset = pygame.image.load("sprites/npc/"+image+".png").convert_alpha()
 		tilew, tileh = tileset.get_width()/4, tileset.get_height()/4
 		j = 0
 		for dir in self.images:

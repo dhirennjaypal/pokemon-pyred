@@ -1,8 +1,8 @@
 import pygame
-import box
-import controller
-import savegame
-import data
+from . import box
+#import controller
+from src.backend import savegame
+from src.backend import data
 
 OBJECTBUFFER = 5
 BORDER = 10

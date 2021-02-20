@@ -1,8 +1,7 @@
 import json
-from dialog import Dialog, ChoiceDialog
-from npc import NPC
-#temp
-import savegame
+from src.components.dialog import Dialog, ChoiceDialog
+from src.npc import NPC
+from src.backend import savegame
 
 class ScriptEngine:
 	

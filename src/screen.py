@@ -1,8 +1,8 @@
 import pygame
-from controller import Controller
-from menu import Menu
-from mainmenu import MainMenu
-from foreground import FadeIn, FadeOut
+from .components.controller import Controller
+from .components.menu import Menu
+from .components.mainmenu import MainMenu
+from .components.foreground import FadeIn, FadeOut
 
 white = (255, 255, 255)
 

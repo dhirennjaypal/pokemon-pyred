@@ -2,8 +2,9 @@ import pygame
 from pytmx.util_pygame import load_pygame
 import pyscroll
 from pyscroll.group import PyscrollGroup
-from dialog import Dialog
-from foreground import FadeOutAndIn, FadeOut, FadeIn
+from .components.dialog import Dialog
+from .foreground import FadeOutAndIn, FadeOut, FadeIn
+from os import path
 
 class Map:
 
@@ -17,7 +18,7 @@ class Map:
 
 	def load(self, data):
 		#loading map to creating group
-		tmx_data = load_pygame(self.datahelper.maps[data["mapname"]]["file"])
+		tmx_data = load_pygame( path.join(self.game.dir, "data", self.datahelper.maps[data["mapname"]]["file"]) )
 		map_data = pyscroll.data.TiledMapData(tmx_data)
 		self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.surface.get_size(), clamp_camera=False) #tall_sprites=1)
 		self.map_layer.zoom = 2
@@ -66,13 +67,7 @@ class Map:
 		self.timer = 0
 		self.warping = False
 		self.nextmap = {}
-		#self.autorun = False
-		#tempfade
-		#self.fade = FadeOut(self.screen.surface, 10)
-		#self.fade = FadeIn(self.screen.surface, 30)
-		#self.fade = FadeOut(self.screen.surface, 30)
-		#self.loaded = False
-
+		
 	def draw(self):
 		self.group.update()
 		self.hero.tick()
@@ -82,17 +77,9 @@ class Map:
 		self.group.draw(self.screen.surface)
 
 	def change_map(self, data):
-		#self.screen.drawFade()
-		#temp = self.autorun
-		#temp fade
-		#self.fade = FadeOut(self.screen.surface, 30)
 		self.warps = 0
 		self.scriptengine.clear()
-		#self.group.remove(self.hero)
-		#if self.fade.halftime<self.fade.count:
 		self.load(data)
-		#if self.screen != None:
-		#self.autorun = temp
 
 	def update(self):
 		for key, warp in self.warps.items():

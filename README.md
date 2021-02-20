@@ -1,6 +1,6 @@
 # Media
 
-- [Screenshots](MEDIA.md)
+- [Screenshots](docs/MEDIA.md)
 
 # About
 
